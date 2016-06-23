@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         int oldVersionCode = PrefConstances.getAppPrefInt(this, "version_code");
         int currentVersionCode = SAppUtil.getAppVersionCode(this);
         if (currentVersionCode > oldVersionCode) {
-            startActivity(new Intent(MainActivity.this, ProductTourActivity.calss));
+            startActivity(new Intent(MainActivity.this, ProductTourActivity.class));
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             PrefConstances.putAppPrefInt(this, "version_code", currentVersionCode);
         }
