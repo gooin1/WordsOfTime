@@ -1,9 +1,9 @@
 package gooin.github.io.wordsoftime;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -19,12 +19,13 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        finish();
-                    }
-                },300);
+					
+					@Override
+					public void run() {
+						finish();
+					}
+				}, 300);
             }
-        },500);
+        }, 500);
     }
 }
